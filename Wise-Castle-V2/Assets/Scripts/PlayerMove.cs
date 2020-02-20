@@ -5,12 +5,19 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
 	
+	public float playerSpeed = 150;
+	
     // Update is called once per frame
     void Update()
     {
 		
-		Vector3 horizontal = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
-		transform.position = transform.position + horizontal * 150 * Time.deltaTime;
+		//player moves right automatically
+		transform.Translate(Vector3.right * playerSpeed * Time.deltaTime);
         
     }
+	
+	//player (this) collides with object (other)
+	private void OnTriggerEnter(Collider other){
+		playerSpeed = 0;
+	}
 }
