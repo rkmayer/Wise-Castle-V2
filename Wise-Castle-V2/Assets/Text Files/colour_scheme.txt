@@ -1,0 +1,7 @@
+RGBA Colours
+Silvery-White: 214, 227, 226, 255
+Creamy-White: 229, 227, 209, 255
+Blue: 39, 158, 180, 255
+Red: 252, 63, 69, 255
+Yellow: 254, 199, 110, 255
+Purple: 73, 67, 74, 255
