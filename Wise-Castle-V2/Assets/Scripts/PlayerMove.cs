@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     }
 	
 	//player (this) collides with object (other)
-	private void OnTriggerEnter(Collider other){
-		playerSpeed = 0;
+	private void OnTriggerEnter2D(Collider2D other){
+		playerSpeed = playerSpeed * -1;
 	}
 }
