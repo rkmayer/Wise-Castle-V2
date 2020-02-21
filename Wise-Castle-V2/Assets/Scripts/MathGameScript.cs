@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MathGameScript : MonoBehaviour
 {
@@ -9,12 +10,17 @@ public class MathGameScript : MonoBehaviour
 	
 	public bool stopped = false;
 	
-	public bool questionPassed = false;
+	public int pointsEarned = 0;
+	public int questionsRemaining = 3;
 	
 	public Collider2D objectTouching;
 	
 	public GameObject ui;
 	public CanvasGroup ui_group;
+	
+	public GameObject finish_ui;
+	public CanvasGroup finish_group;
+	public Text pointsText;
 	
 	public Text questionText;
 	public Text inputText;
@@ -22,7 +28,7 @@ public class MathGameScript : MonoBehaviour
 	//buttons
 	public Button button_0, button_1, button_2, button_3, button_4, button_5,
 	button_6, button_7, button_8, button_9, button_plus, button_minus,
-	button_divide, button_multiply, button_enter;
+	button_divide, button_multiply, button_enter, button_OK;
 	
 	//components of math question
 	int num1;
@@ -33,11 +39,17 @@ public class MathGameScript : MonoBehaviour
 	int operatorUsed; //0 = +, 1 = -, 2 = /, 3 = x
 	
 	void Start(){
-		//get the UI - this (player) -> child (camera) -> child (UI)
+		//get the math UI - this (player) -> child (camera) -> child (UI)
 		ui = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
 		ui_group = ui.GetComponent<CanvasGroup>();
-		//start game with ui hidden
+		//start game with math ui hidden
 		hideUI();
+		
+		//get finish UI
+		finish_ui = this.gameObject.transform.GetChild(0).GetChild(1).gameObject;
+		finish_group = finish_ui.GetComponent<CanvasGroup>();
+		//start game with finish ui hidden
+		hideFinishUI();
 		
 		//add listeners to all buttons
 		button_0.onClick.AddListener(() => inputValue('0'));
@@ -56,6 +68,8 @@ public class MathGameScript : MonoBehaviour
 		button_multiply.onClick.AddListener(() => inputValue('x'));
 		
 		button_enter.onClick.AddListener(enterInput);
+		
+		button_OK.onClick.AddListener(goBackToMain);
 	}
 	
     // Update is called once per frame
@@ -78,17 +92,26 @@ public class MathGameScript : MonoBehaviour
 		generateQuestion();
 	}
 	
+	//question was answered correctly
 	public void pass(){
-		//award points(?)
+		//award points
+		pointsEarned = pointsEarned + 10;
 		//delete object
 		if(objectTouching.gameObject.tag == "delete"){
 			Destroy(objectTouching.gameObject);
 			stopped = false;
-			questionPassed = false;
 		}
 		//clear and hide UI
 		inputText.text = "";
 		hideUI();
+		//decrement questions
+		questionsRemaining--;
+		if(questionsRemaining == 0){
+			//all questions answered... show finish ui and return to main scene (button)
+			showFinishUI();
+			//stop player
+			stopped = true;
+		}
 	}
 	
 	//show the question UI
@@ -103,6 +126,21 @@ public class MathGameScript : MonoBehaviour
 		//set alpha to transparent and do not allow interactions
 		ui_group.alpha = 0f;
 		ui_group.blocksRaycasts = false;
+	}
+	
+	//show the finish UI
+	public void showFinishUI(){
+		//set alpha to opaque and allow interactions
+		finish_group.alpha = 1f;
+		finish_group.blocksRaycasts = true;
+		pointsText.text = pointsEarned.ToString();
+	}
+	
+	//hide the finish UI
+	public void hideFinishUI(){
+		//set alpha to transparent and do not allow interactions
+		finish_group.alpha = 0f;
+		finish_group.blocksRaycasts = false;
 	}
 	
 	//generate question
@@ -299,5 +337,10 @@ public class MathGameScript : MonoBehaviour
 			}
 			break;
 		}
+	}
+	
+	//go back to main scene
+	public void goBackToMain(){
+		SceneManager.LoadScene("main");
 	}
 }
