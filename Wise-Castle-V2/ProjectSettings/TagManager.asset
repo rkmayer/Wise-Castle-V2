@@ -6,6 +6,7 @@ TagManager:
   tags:
   - delete
   - UI
+  - QuestionText
   layers:
   - Default
   - TransparentFX
