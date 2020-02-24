@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,19 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject cardSpawner; 
     private bool restockCards = false;
+    
+    [SerializeField]
+    private GameObject endCanvas;
+    [SerializeField]
+    private Button finishBtn;
+    [SerializeField]
+    private Text endText;
+    
+    void Awake()
+    {
+        finishBtn.onClick.AddListener(goBackToMain);
+        endCanvas.SetActive(false);
+    }
 
     void Update()
     {
@@ -152,6 +166,12 @@ public class GameManager : MonoBehaviour
     
     void gameComplete()
     {
-    
+        endText.text = "Points Rewarded: " + pairsMade + "!";
+        endCanvas.SetActive(true);
+        
     }
+    
+    public void goBackToMain(){
+		SceneManager.LoadScene("main");
+	}
 }
