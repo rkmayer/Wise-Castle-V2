@@ -75,11 +75,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11320}
     - Class: 114
+      Script: {instanceID: 11360}
+    - Class: 114
       Script: {instanceID: 11774}
     - Class: 114
       Script: {instanceID: 11924}
     - Class: 114
       Script: {instanceID: 12040}
+    - Class: 114
+      Script: {instanceID: 12186}
     - Class: 114
       Script: {instanceID: 12448}
     - Class: 114
@@ -761,7 +765,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 8589a0cd1f193c40f85f7b75d5d688b5
+      Hash: afb93965b82d7680d92996b18b972b0e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1025,6 +1029,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
+  - Assets/Scenes/title.unity
   - Assets/Scenes/Game Scenes/math.unity
   - Assets/Scenes/main.unity
   - Assets/Scenes/Game Scenes/english.unity
@@ -1032,9 +1037,8 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Game Scenes/art.unity
   - Assets/Scenes/player.unity
   - Assets/Scenes/shop.unity
-  - Assets/Scenes/title.unity
   - Assets/Scenes/Tutorial Scenes/tutorial_art.unity
   - Assets/Scenes/Tutorial Scenes/tutorial_chem.unity
   - Assets/Scenes/Tutorial Scenes/tutorial_english.unity
   - Assets/Scenes/Tutorial Scenes/tutorial_math.unity
-  playerPath: /Users/darcy/Documents/Files_Jenna/Builds_Unity/Wise_Castle_V1_B1/Wise-Castle-V2.exe
+  playerPath: /Users/darcy/Documents/Files_Jenna/Builds_Unity/Trial_Build_Wise-Castle-B3/Wise-Castle-V2.exe
