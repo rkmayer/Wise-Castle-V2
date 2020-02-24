@@ -1,4 +1,14 @@
-﻿using System.Collections;
+﻿/*
+* Script File: CardSpawner.cs
+* Developer: Jenna Magbanua (for Wise Castle)
+* Purpose: Chemsitry Game Component
+* Description:  
+*      It takes the data from the chemistry elements text file to make a list of card prefabs. 
+*      From this list, 6 are randomly selected and put in a list.
+*      From this new list, the cards are instatiated randonly on screen in rows/cols. 
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,49 +18,41 @@ public class CardSpawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject cardPrefab; 
-    private List<GameObject> _cardsToSpawn;
-    private List<GameObject> _cardsAvailableToSpawn;
     
-    [SerializeField]
-    private List<int> _cardsToSpawnCount;
+    private List<GameObject> _cardsToSpawn;//the cards to be spawned on screen 
+    private List<GameObject> _cardsAvailableToSpawn; //the complete list of all element cards 
     private int cardsToSpawnCount;
     
     [SerializeField]
     private Transform _startPoint;
-    
-    [SerializeField]
-    private int _rows = 3;
-    [SerializeField]
-    private int _columns = 4;
-    
-    [SerializeField]
-    private float _xDistance = 1.25f;
-    [SerializeField]
-    private float _yDistance = 1.75f;
+    private int rows = 3;
+    private int columns = 4;
+
+    private float _xDistance = 3;
+    private float _yDistance = 2;
     
     private GameManager _gameManager;
     
     [SerializeField]
     private TextAsset chemistryData;
-    private List<List<string>> elements = new List<List<string>>(); 
     
-    void Awake ()
+    void Awake () //done before the game starts
     {
         _gameManager = FindObjectOfType<GameManager>();
-        StartCoroutine(GenerateCards(cardPrefab));
+        StartCoroutine(GenerateCards(cardPrefab)); //needs to be done first before spawning is allowed
     }
     
-    void Start()
+    void Start() //when the game starts 
     {
         SpawningCards();
     }
     
-    private List<string> TextAssetToList(TextAsset ta) 
+    private List<string> TextAssetToList(TextAsset ta)//transforms text asset to a list of strings  
     {
         return new List<string>(ta.text.Split('\n'));
     }
     
-    IEnumerator GenerateCards(GameObject p)
+    IEnumerator GenerateCards(GameObject p)//generates the main list of card prefabs where cards are selected
     {   
         List<string> elementList = TextAssetToList(chemistryData);
         List<string> elementData; 
@@ -74,7 +76,7 @@ public class CardSpawner : MonoBehaviour
         yield return null;
     }
     
-    private List<GameObject> ChooseRandomCards(List<GameObject> list, int n)
+    private List<GameObject> ChooseRandomCards(List<GameObject> list, int n)//randomly selects 6 cards from list and returns new list
     {
         List<GameObject> genList = new List<GameObject>();
         
@@ -95,14 +97,14 @@ public class CardSpawner : MonoBehaviour
         return genList; 
     }
     
-    void Spawn()
+    void Spawn() //spawns the cards and displays them on screen 
     {
-        cardsToSpawnCount = (_rows * _columns) /2; 
+        cardsToSpawnCount = (rows * columns) / 2; 
         List<GameObject> _cardsToSpawn = ChooseRandomCards(_cardsAvailableToSpawn, cardsToSpawnCount);
         
-        for (int x = 0; x < _columns; x++)
+        for (int x = 0; x < columns; x++)
         {
-            for (int y = 0; y < _rows; y++)
+            for (int y = 0; y < rows; y++)
             {
                 int index = Random.Range(0, _cardsToSpawn.Count);
             
@@ -111,8 +113,6 @@ public class CardSpawner : MonoBehaviour
                 _cardsToSpawn.RemoveAt(index);
             }
         }
-        
-        
     }
     
     public void SpawningCards()

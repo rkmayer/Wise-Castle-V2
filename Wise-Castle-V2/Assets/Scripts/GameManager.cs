@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/*
+* Script File: GameManager.cs
+* Developer: Jenna Magbanua (for Wise Castle)
+* Purpose: Chemsitry Game Component
+* Description:  
+*      It controls the major components/actions for the game  
+*      Handles the card matching, points increase, flipping, end screen, etc.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,7 +34,7 @@ public class GameManager : MonoBehaviour
     private int pairsMade = 0; 
     
     [SerializeField]
-    private GameObject cardSpawner; 
+    private GameObject cardSpawner;//access to the card spawner object to spawn new cards
     private bool restockCards = false;
     
     [SerializeField]
@@ -35,13 +44,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Text endText;
     
-    void Awake()
+    void Awake() //occurs before game starts
     {
         finishBtn.onClick.AddListener(goBackToMain);
         endCanvas.SetActive(false);
     }
 
-    void Update()
+    void Update() //runs every frame 
     {
         if (timerRun)
         {
@@ -60,9 +69,8 @@ public class GameManager : MonoBehaviour
         if(restockCards == true)
         {
             restockCards = false;
-            StartCoroutine(RestockCards()); 
+            StartCoroutine(RestockCards()); //needs to be done after a period of time so allows last match to disappear
         }
-        
         
         pairsText.text = "Pairs: " + pairsMade;
     }
@@ -79,13 +87,13 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void AddCard(GameObject card) //called from CardController class
+    public void AddCard(GameObject card) //called from CardController.cs
     {
-        if (firstCard == null) //Adds first card
+        if (firstCard == null)//add first card
         {
             firstCard = card;
         }
-        else //Adds second card and checks if both cards match
+        else//adds second card and checks if card id's match
         {
             secondCard = card;
             _canFlip = false;
@@ -101,7 +109,7 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    IEnumerator DeactivateCards()
+    IEnumerator DeactivateCards()//removal of cards (for when they're a match)
     {
         yield return new WaitForSeconds(_timeBetweenFlips);
         firstCard.SetActive(false);
@@ -109,7 +117,7 @@ public class GameManager : MonoBehaviour
         Reset();
     }
     
-    IEnumerator FlipCards()
+    IEnumerator FlipCards()//flipping of cards 
     {
         yield return new WaitForSeconds(_timeBetweenFlips);
         firstCard.GetComponent<CardController>().FlipCard();
@@ -117,16 +125,17 @@ public class GameManager : MonoBehaviour
         Reset();
     }
     
-    public void DecreaseCardCount()
+    public void DecreaseCardCount()//decreasing the card count (for card restock)
     {
         _cardsLeft -= 1;
+        
         if (_cardsLeft == 0 && timeLeft > 0)
         {
             restockCards = true; 
         }
     }
     
-    IEnumerator RestockCards()
+    IEnumerator RestockCards()//spawning new set of cards on screen 
     {
         yield return new WaitForSeconds(_timeBetweenFlips);
         cardSpawner.GetComponent<CardSpawner>().SpawningCards();
@@ -145,7 +154,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    bool CheckIfMatch()
+    bool CheckIfMatch()//checking if the cards' are a pair 
     {
         if (firstCard.GetComponent<CardController>().cardID == secondCard.GetComponent<CardController>().cardID)
         {
@@ -157,21 +166,22 @@ public class GameManager : MonoBehaviour
         return false;
     }
     
-    public void Reset()
+    public void Reset()//resetting the cards (for when they're not a match)
     {
         firstCard = null;
         secondCard = null;
         _canFlip = true;
     }
     
-    void gameComplete()
+    void gameComplete()//gameComplete --> after timer runs out 
     {
         endText.text = "Points Rewarded: " + pairsMade + "!";
         endCanvas.SetActive(true);
         
     }
     
-    public void goBackToMain(){
+    public void goBackToMain()//end screen button --> return back to main
+    {
 		SceneManager.LoadScene("main");
 	}
 }
