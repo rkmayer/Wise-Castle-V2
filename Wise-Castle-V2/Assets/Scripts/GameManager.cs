@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private Text timerText;
-    private float timeLeft = 120;
+    private float timeLeft = 60;
     private bool timerRun = true;
     
     private GameObject firstCard = null;

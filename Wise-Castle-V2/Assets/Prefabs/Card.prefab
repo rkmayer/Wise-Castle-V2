@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3799119573639115114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 3799119574874594585}
@@ -73,6 +73,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cardID: 
+  cardVal1: 
+  cardVal2: 
+  cardPair: 0
+  cardText: {fileID: 0}
   frontOfCard: {fileID: 21300000, guid: 0f1c9273cf40b409ebb685af9387b099, type: 3}
 --- !u!1 &3799119574084995386
 GameObject:
