@@ -1370,7 +1370,7 @@ GameObject:
   - component: {fileID: 346021528}
   - component: {fileID: 346021532}
   m_Layer: 10
-  m_Name: door
+  m_Name: chest_2
   m_TagString: delete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1389,18 +1389,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0020200312, y: 0.008281216}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.47, y: 6.1}
+    oldSize: {x: 0.72, y: 0.72}
     newSize: {x: 3.47, y: 6.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.47, y: 6.1}
+  m_Size: {x: 0.73923105, y: 0.7278806}
   m_EdgeRadius: 0
 --- !u!50 &346021529
 Rigidbody2D:
@@ -1462,7 +1462,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aa2b0d239a385fc44a2f87c1d95bfc66, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ee51776ea2fba04fb49fe92da3db87e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1481,8 +1481,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346021527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1304.8, y: 144.3, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalPosition: {x: 1304.8, y: 99.71, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2536,7 +2536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 78, y: 0.0000059605}
+  m_AnchoredPosition: {x: 108.9, y: 0.0000059605}
   m_SizeDelta: {x: 287, y: 56.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538900160
@@ -2558,7 +2558,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d45dde7ca563e4109a4e09b8f85e4047, type: 3}
     m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
@@ -5442,7 +5442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.25, y: 101}
+  m_AnchoredPosition: {x: 0, y: 102}
   m_SizeDelta: {x: 422.5, y: 70.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361471044
@@ -5464,8 +5464,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 48
+    m_Font: {fileID: 12800000, guid: d45dde7ca563e4109a4e09b8f85e4047, type: 3}
+    m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -5476,7 +5476,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Win!
+  m_Text: All Bones Found!
 --- !u!222 &1361471045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5879,7 +5879,7 @@ GameObject:
   - component: {fileID: 1581106585}
   - component: {fileID: 1581106589}
   m_Layer: 10
-  m_Name: sword
+  m_Name: chest_3
   m_TagString: delete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5919,18 +5919,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0016387105, y: 0.0016394705}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.29, y: 1.24}
+    oldSize: {x: 0.72, y: 0.72}
     newSize: {x: 0.29, y: 1.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.29, y: 1.24}
+  m_Size: {x: 0.726127, y: 0.7317288}
   m_EdgeRadius: 0
 --- !u!212 &1581106587
 SpriteRenderer:
@@ -5971,7 +5971,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a21f1b1433ca20a4aa68bc8307c165f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ee51776ea2fba04fb49fe92da3db87e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5990,7 +5990,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581106584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1977, y: 120.4, z: 0}
+  m_LocalPosition: {x: 1977, y: 103.6, z: 0}
   m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6043,7 +6043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: -0.0000066757}
+  m_AnchoredPosition: {x: -114, y: -0.0000066757}
   m_SizeDelta: {x: 287, y: 56.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1602672983
@@ -6065,7 +6065,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d45dde7ca563e4109a4e09b8f85e4047, type: 3}
     m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
@@ -7222,7 +7222,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.15355618, y: 0.0045163035}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7233,7 +7233,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.6}
+  m_Size: {x: 0.5071124, y: 0.27482188}
   m_EdgeRadius: 0
 --- !u!50 &1779366625
 Rigidbody2D:
