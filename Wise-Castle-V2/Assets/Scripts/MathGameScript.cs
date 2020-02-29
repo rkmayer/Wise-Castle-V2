@@ -143,6 +143,19 @@ public class MathGameScript : MonoBehaviour
 		finish_group.blocksRaycasts = false;
 	}
 	
+	//factor function
+	public int getFactor(int x){
+		List<int> factors = new List<int>();
+		for(int i = 0; i < x; i++){
+			if( x % i == 0){
+				//i is a factor of x
+				factors.Add(i);
+			}	
+		}
+		int random_factor = Random.Range(0, factors.Count);
+		return factors[random_factor];
+	}
+	
 	//generate question
 	public void generateQuestion(){
 		//randomly assign one block to be blank
@@ -154,12 +167,12 @@ public class MathGameScript : MonoBehaviour
 		//generate question...
 		if(blockToEnter == 0){
 			//...with 1st number blank
-			num2 = Random.Range(0,13);
+			num2 = Random.Range(1,13);
 			switch(operatorUsed){
 				case(0):
 				//addition
 				math_operator = '+';
-				num1 = Random.Range(0,13);
+				num1 = Random.Range(1,13);
 				answer = num1 + num2;
 				questionText.text = "? " + math_operator + " " + num2 + " = " + answer;
 				break;
@@ -173,7 +186,8 @@ public class MathGameScript : MonoBehaviour
 				case(2):
 				//division
 				math_operator = '/';
-				num1 = Random.Range(num2*2, num2*12);
+				num1 = Random.Range(1,25);
+				num2 = getFactor(num1);	
 				answer = num1 / num2;
 				questionText.text = "? " + math_operator + " " + num2 + " = " + answer;
 				break;
@@ -206,7 +220,7 @@ public class MathGameScript : MonoBehaviour
 				case(2):
 				//division
 				math_operator = '/';
-				num2 = Random.Range(1, num1);
+				num2 = getFactor(num1);
 				answer = num1 / num2;
 				questionText.text = num1 + " " + math_operator + " ?" + " = " + answer;
 				break;
@@ -239,7 +253,7 @@ public class MathGameScript : MonoBehaviour
 				case(2):
 				//division
 				math_operator = '/';
-				num2 = Random.Range(1, num1);
+				num2 = getFactor(num1);
 				answer = num1 / num2;
 				questionText.text = num1 + " ? " + num2 + " = " + answer;
 				break;
@@ -272,7 +286,7 @@ public class MathGameScript : MonoBehaviour
 				case(2):
 				//division
 				math_operator = '/';
-				num2 = Random.Range(1, num1);
+				num2 = getFactor(num1);
 				answer = num1 / num2;
 				questionText.text = num1 + " " + math_operator + " " + num2 + " = ?";
 				break;
@@ -293,6 +307,7 @@ public class MathGameScript : MonoBehaviour
 	}
 	
 	public void enterInput(){
+		
 		//find which block is blank
 		switch(blockToEnter){
 			case(0):
@@ -318,7 +333,8 @@ public class MathGameScript : MonoBehaviour
 			break;
 			case(2):
 			//operator is blank
-			if(math_operator.ToString() == inputText.text){
+			char operatorEntered = char.Parse(inputText.text);
+			if(evalOperator(operatorEntered)){
 				//is correct
 				pass();
 			}else{
@@ -337,6 +353,36 @@ public class MathGameScript : MonoBehaviour
 			}
 			break;
 		}
+	}
+	
+	public bool evalOperator(char x){
+		bool passed = false;
+		
+		switch(x){
+			case('+'):
+			if(num1 + num2 == answer){
+				passed = true;
+			}
+			break;
+			case('-'):
+			if(num1 - num2 == answer){
+				passed = true;
+			}
+			break;
+			case('/'):
+			if(num1 / num2 == answer){
+				passed = true;
+			}
+			break;
+			case('x'):
+			if(num1 * num2 == answer){
+				passed = true;
+			}
+			break;
+		}
+		
+		return passed;
+		
 	}
 	
 	//go back to main scene
