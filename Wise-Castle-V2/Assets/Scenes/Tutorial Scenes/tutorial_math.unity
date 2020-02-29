@@ -460,10 +460,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Test your math skills in this adventure....
+  m_Text: 'Merlin the dog has had his bones stolen - they''re hidden with math questions!
 
 
-    [??]'
+    Help
+    merlin solve the questions and get back his bones!'
 --- !u!222 &737858782
 CanvasRenderer:
   m_ObjectHideFlags: 0
