@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MathGameScript : MonoBehaviour
 {
+
 	public float playerSpeed = 150;
+	[SerializeField] private Animator myAnimationController;
 	
 	public bool stopped = false;
 	
@@ -85,6 +87,7 @@ public class MathGameScript : MonoBehaviour
 	//player collides with object
 	public void OnTriggerEnter2D(Collider2D other){
 		objectTouching = other;
+		myAnimationController.SetBool("tail", true);
 		//stop player
 		stopped = true;
 		//show math question
@@ -100,6 +103,7 @@ public class MathGameScript : MonoBehaviour
 		if(objectTouching.gameObject.tag == "delete"){
 			Destroy(objectTouching.gameObject);
 			stopped = false;
+			myAnimationController.SetBool("tail", false);
 		}
 		//clear and hide UI
 		inputText.text = "";
@@ -107,7 +111,9 @@ public class MathGameScript : MonoBehaviour
 		//decrement questions
 		questionsRemaining--;
 		if(questionsRemaining == 0){
-			//all questions answered... show finish ui and return to main scene (button)
+			//all questions answered... 
+			myAnimationController.SetBool("tail", true);
+			//show finish ui and return to main scene (button)
 			showFinishUI();
 			//stop player
 			stopped = true;
@@ -146,14 +152,18 @@ public class MathGameScript : MonoBehaviour
 	//factor function
 	public int getFactor(int x){
 		List<int> factors = new List<int>();
-		for(int i = 0; i < x; i++){
-			if( x % i == 0){
+		for(int i = 1; i < x; i++){
+			if( (x % i) == 0){
 				//i is a factor of x
 				factors.Add(i);
 			}	
 		}
 		int random_factor = Random.Range(0, factors.Count);
-		return factors[random_factor];
+		if(factors[random_factor] != 0){
+			return factors[random_factor];
+		}else{
+			return 1;
+		}
 	}
 	
 	//generate question
@@ -186,7 +196,7 @@ public class MathGameScript : MonoBehaviour
 				case(2):
 				//division
 				math_operator = '/';
-				num1 = Random.Range(1,25);
+				num1 = Random.Range(2,25);
 				num2 = getFactor(num1);	
 				answer = num1 / num2;
 				questionText.text = "? " + math_operator + " " + num2 + " = " + answer;
@@ -201,7 +211,7 @@ public class MathGameScript : MonoBehaviour
 			}
 		}else if(blockToEnter == 1){
 			//...with 2nd number blank
-			num1 = Random.Range(1,13);
+			num1 = Random.Range(2,13);
 			switch(operatorUsed){
 				case(0):
 				//addition
@@ -234,7 +244,7 @@ public class MathGameScript : MonoBehaviour
 			}
 		}else if(blockToEnter == 2){
 			//...with operator blank
-			num1 = Random.Range(1, 13);
+			num1 = Random.Range(2, 13);
 			switch(operatorUsed){
 				case(0):
 				//addition
@@ -267,7 +277,7 @@ public class MathGameScript : MonoBehaviour
 			}
 		}else{
 			//...with answer blank
-			num1 = Random.Range(1, 13);
+			num1 = Random.Range(2, 13);
 			switch(operatorUsed){
 				case(0):
 				//addition
@@ -355,6 +365,7 @@ public class MathGameScript : MonoBehaviour
 		}
 	}
 	
+	//evaluates the equation - allows multiple answers for one question if any
 	public bool evalOperator(char x){
 		bool passed = false;
 		
