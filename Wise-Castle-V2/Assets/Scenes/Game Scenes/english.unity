@@ -480,7 +480,8 @@ GameObject:
   m_Component:
   - component: {fileID: 296918059}
   - component: {fileID: 296918060}
-  m_Layer: 0
+  - component: {fileID: 296918061}
+  m_Layer: 9
   m_Name: leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,6 +552,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!225 &296918061
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296918058}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &427484607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,8 +1069,7 @@ GameObject:
   - component: {fileID: 532934563}
   - component: {fileID: 532934562}
   - component: {fileID: 532934561}
-  - component: {fileID: 532934564}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: hangman_ui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1149,18 +1161,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!225 &532934564
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532934559}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &536764711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,7 +1679,8 @@ GameObject:
   m_Component:
   - component: {fileID: 640549805}
   - component: {fileID: 640549806}
-  m_Layer: 0
+  - component: {fileID: 640549807}
+  m_Layer: 9
   m_Name: arm_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1750,6 +1751,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!225 &640549807
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640549804}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &644740078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3048,7 +3061,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1201196752}
   - component: {fileID: 1201196753}
-  m_Layer: 0
+  - component: {fileID: 1201196754}
+  m_Layer: 9
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3119,6 +3133,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!225 &1201196754
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201196751}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1204517077
 GameObject:
   m_ObjectHideFlags: 0
@@ -3817,8 +3843,12 @@ MonoBehaviour:
   btn_y: {fileID: 1176119551}
   btn_z: {fileID: 771282479}
   wordToGuess: {fileID: 1121787896}
-  hangman_ui: {fileID: 0}
-  hangman_group: {fileID: 0}
+  head: {fileID: 1640133045}
+  body: {fileID: 1201196751}
+  arm_left: {fileID: 640549804}
+  arm_right: {fileID: 1306639087}
+  leg_left: {fileID: 2079486663}
+  leg_right: {fileID: 296918058}
   minWordLength: 5
   maxWordLength: 12
 --- !u!1 &1286703399
@@ -4221,7 +4251,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1306639088}
   - component: {fileID: 1306639089}
-  m_Layer: 0
+  - component: {fileID: 1306639090}
+  m_Layer: 9
   m_Name: arm_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4292,6 +4323,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!225 &1306639090
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306639087}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1466278987
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,6 +5125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640133046}
   - component: {fileID: 1640133047}
+  - component: {fileID: 1640133048}
   m_Layer: 9
   m_Name: head
   m_TagString: Untagged
@@ -5153,6 +5197,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!225 &1640133048
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640133045}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1642875098
 GameObject:
   m_ObjectHideFlags: 0
@@ -6272,6 +6328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2079486664}
   - component: {fileID: 2079486665}
+  - component: {fileID: 2079486666}
   m_Layer: 9
   m_Name: leg_left
   m_TagString: Untagged
@@ -6343,6 +6400,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!225 &2079486666
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079486663}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2126005100
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,8 +15,15 @@ public class EnglishGameController : MonoBehaviour
 	
 	//word text field
 	[SerializeField] Text wordToGuess;
-	[SerializeField] GameObject hangman_ui;
-	[SerializeField] CanvasGroup hangman_group;
+	
+	//hangman ui
+	[SerializeField] GameObject head;
+	[SerializeField] GameObject body;
+	[SerializeField] GameObject arm_left;
+	[SerializeField] GameObject arm_right;
+	[SerializeField] GameObject leg_left;
+	[SerializeField] GameObject leg_right;
+	int part_count = 0;
 	
 	//array of words from text file
 	string[] words;
@@ -29,8 +36,13 @@ public class EnglishGameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		//get hangman ui
-		
+		//set body parts to inactive
+		head.GetComponent<Renderer>().enabled = true;
+		body.SetActive(true);
+		arm_left.SetActive(true);
+		arm_right.SetActive(true);
+		leg_left.SetActive(true);
+		leg_right.SetActive(true);
 		
 		//add listeners to buttons
 		btn_a.onClick.AddListener(() => checkGuess('a', btn_a));
@@ -115,6 +127,8 @@ public class EnglishGameController : MonoBehaviour
 			wordToGuess.text = updateHiddenWord(indicesList.ToArray(), guess, wordToGuess.text);
 		}else{
 			//the letter is not in the word
+			updateMan(part_count);
+			part_count++;
 		}
 	}
 	
@@ -146,5 +160,34 @@ public class EnglishGameController : MonoBehaviour
 		}
 		//return
 		return output;
+	}
+	
+	void updateMan(int part){
+		switch(part){
+			case(0):
+			//head
+			head.GetComponent<Renderer>().enabled = true;
+			break;
+			case(1):
+			//body
+			body.SetActive(true);
+			break;
+			case(2):
+			//arm_left
+			arm_left.SetActive(true);
+			break;
+			case(3):
+			//arm_right
+			arm_right.SetActive(true);
+			break;
+			case(4):
+			//leg_left
+			leg_left.SetActive(true);
+			break;
+			case(5):
+			//leg_right
+			leg_right.SetActive(true);
+			break;
+		}
 	}
 }
