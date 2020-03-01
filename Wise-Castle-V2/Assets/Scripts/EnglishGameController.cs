@@ -78,8 +78,14 @@ public class EnglishGameController : MonoBehaviour
 		chooseWord(words);
 		//show hidden word
 		showHiddenWord(wordChosen);
-        
     }
+	
+	void Update(){
+		if(part_count == 6){
+			//man is hanged
+			
+		}
+	}
 
 	//choose a word to guess
 	void chooseWord(string[] words){
