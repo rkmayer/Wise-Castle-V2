@@ -17,12 +17,12 @@ public class EnglishGameController : MonoBehaviour
 	[SerializeField] Text wordToGuess;
 	
 	//hangman ui
-	[SerializeField] GameObject head;
-	[SerializeField] GameObject body;
-	[SerializeField] GameObject arm_left;
-	[SerializeField] GameObject arm_right;
-	[SerializeField] GameObject leg_left;
-	[SerializeField] GameObject leg_right;
+	[SerializeField] Image head;
+	[SerializeField] Image body;
+	[SerializeField] Image arm_left;
+	[SerializeField] Image arm_right;
+	[SerializeField] Image leg_left;
+	[SerializeField] Image leg_right;
 	int part_count = 0;
 	
 	//array of words from text file
@@ -37,12 +37,12 @@ public class EnglishGameController : MonoBehaviour
     void Start()
     {
 		//set body parts to inactive
-		head.GetComponent<Renderer>().enabled = true;
-		body.SetActive(true);
-		arm_left.SetActive(true);
-		arm_right.SetActive(true);
-		leg_left.SetActive(true);
-		leg_right.SetActive(true);
+		head.enabled = false;
+		body.enabled = false;
+		arm_left.enabled = false;
+		arm_right.enabled = false;
+		leg_left.enabled = false;
+		leg_right.enabled = false;
 		
 		//add listeners to buttons
 		btn_a.onClick.AddListener(() => checkGuess('a', btn_a));
@@ -166,27 +166,27 @@ public class EnglishGameController : MonoBehaviour
 		switch(part){
 			case(0):
 			//head
-			head.GetComponent<Renderer>().enabled = true;
+			head.enabled = true;
 			break;
 			case(1):
 			//body
-			body.SetActive(true);
+			body.enabled = true;
 			break;
 			case(2):
 			//arm_left
-			arm_left.SetActive(true);
+			arm_left.enabled = true;
 			break;
 			case(3):
 			//arm_right
-			arm_right.SetActive(true);
+			arm_right.enabled = true;
 			break;
 			case(4):
 			//leg_left
-			leg_left.SetActive(true);
+			leg_left.enabled = true;
 			break;
 			case(5):
 			//leg_right
-			leg_right.SetActive(true);
+			leg_right.enabled = true;
 			break;
 		}
 	}
