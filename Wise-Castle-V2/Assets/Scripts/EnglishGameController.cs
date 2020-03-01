@@ -15,6 +15,8 @@ public class EnglishGameController : MonoBehaviour
 	
 	//word text field
 	[SerializeField] Text wordToGuess;
+	[SerializeField] GameObject hangman_ui;
+	[SerializeField] CanvasGroup hangman_group;
 	
 	//array of words from text file
 	string[] words;
@@ -27,6 +29,9 @@ public class EnglishGameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		//get hangman ui
+		
+		
 		//add listeners to buttons
 		btn_a.onClick.AddListener(() => checkGuess('a', btn_a));
 		btn_b.onClick.AddListener(() => checkGuess('b', btn_b));
