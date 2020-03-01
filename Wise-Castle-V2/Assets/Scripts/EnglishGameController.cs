@@ -11,10 +11,17 @@ public class EnglishGameController : MonoBehaviour
 	[SerializeField] Button btn_a, btn_b, btn_c, btn_d,
 	btn_e, btn_f, btn_g, btn_h, btn_i, btn_j, btn_k, btn_l,
 	btn_m, btn_n, btn_o, btn_p, btn_q, btn_r, btn_s, btn_t,
-	btn_u, btn_v, btn_w, btn_x, btn_y, btn_z;
+	btn_u, btn_v, btn_w, btn_x, btn_y, btn_z, btn_yes, btn_no;
 	
 	//word text field
 	[SerializeField] Text wordToGuess;
+	
+	//win/lose text field
+	[SerializeField] Text winlose;
+	
+	//finish UI
+	GameObject finish_ui;
+	CanvasGroup finish_group;
 	
 	//hangman ui
 	[SerializeField] Image head;
@@ -44,6 +51,14 @@ public class EnglishGameController : MonoBehaviour
 		leg_left.enabled = false;
 		leg_right.enabled = false;
 		
+		//get finish UI
+		finish_ui = this.gameObject.transform.GetChild(0).GetChild(8).gameObject;
+		finish_group = finish_ui.GetComponent<CanvasGroup>();
+		//start game with finish ui hidden
+		//set alpha to transparent and do not allow interactions
+		finish_group.alpha = 0f;
+		finish_group.blocksRaycasts = false;
+		
 		//add listeners to buttons
 		btn_a.onClick.AddListener(() => checkGuess('a', btn_a));
 		btn_b.onClick.AddListener(() => checkGuess('b', btn_b));
@@ -72,6 +87,9 @@ public class EnglishGameController : MonoBehaviour
 		btn_y.onClick.AddListener(() => checkGuess('y', btn_y));
 		btn_z.onClick.AddListener(() => checkGuess('z', btn_z));
 		
+		btn_yes.onClick.AddListener(reloadScene); //restart game
+		btn_no.onClick.AddListener(goBackToMain); //back to main menu
+		
 		//load text file (10000 common english words)
 		words = System.IO.File.ReadAllLines(@"Assets/Text Files/hangman_words.txt");
 		//choose a word to guess
@@ -80,11 +98,32 @@ public class EnglishGameController : MonoBehaviour
 		showHiddenWord(wordChosen);
     }
 	
+	//checks if game is lost
 	void Update(){
 		if(part_count == 6){
-			//man is hanged
-			
+			//man is hanged, lose
+			winlose.text = "You Lose";
+			//show finish UI
+			finish_group.alpha = 1f;
+			finish_group.blocksRaycasts = true;
 		}
+		if(wordToGuess.text == wordChosen){
+			//player guessed word, win
+			winlose.text = "You Win";
+			//show finish UI
+			finish_group.alpha = 1f;
+			finish_group.blocksRaycasts = true;
+		}
+	}
+	
+	//reload scene
+	public void reloadScene(){
+		SceneManager.LoadScene("english");
+	}
+	
+	//go back to main scene
+	public void goBackToMain(){
+		SceneManager.LoadScene("main");
 	}
 
 	//choose a word to guess
