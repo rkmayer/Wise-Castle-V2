@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbc417af95e04648befd8de0e182e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 9086332882124859709, guid: a5a89f0b828af41a6aa32c769117295e,
+  cardPrefab: {fileID: 9086332882124859709, guid: 55edd0e10cbcd4443922d4b51b84e3de,
     type: 3}
   _startPoint: {fileID: 932699362}
   chemistryData: {fileID: 4900000, guid: b4b930173de0840f0900f6251d57f77c, type: 3}
