@@ -103,11 +103,13 @@ public class EnglishGameController : MonoBehaviour
 		if(part_count == 6){
 			//man is hanged, lose
 			winlose.text = "You Lose";
+			wordToGuess.text = wordChosen;
 			//show finish UI
 			finish_group.alpha = 1f;
 			finish_group.blocksRaycasts = true;
 		}
-		if(wordToGuess.text == wordChosen){
+		string checkWord = removeSpaces(wordToGuess.text);
+		if(checkWord == wordChosen){
 			//player guessed word, win
 			winlose.text = "You Win";
 			//show finish UI
@@ -207,6 +209,18 @@ public class EnglishGameController : MonoBehaviour
 		return output;
 	}
 	
+	//remove spaces from hiddenword
+	string removeSpaces(string word){
+		string temp = "";
+		for(int i = 0; i < word.Length; i++){
+			if(!(word[i] == ' ')){
+				temp = temp + word[i];
+			}
+		}
+		return temp;
+	}
+	
+	//incorrect answer, add body part
 	void updateMan(int part){
 		switch(part){
 			case(0):
