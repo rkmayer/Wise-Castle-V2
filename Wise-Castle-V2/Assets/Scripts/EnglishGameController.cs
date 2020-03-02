@@ -100,6 +100,7 @@ public class EnglishGameController : MonoBehaviour
 	
 	//checks if game is lost
 	void Update(){
+		string checkWord = removeSpaces(wordToGuess.text);
 		if(part_count == 6){
 			//man is hanged, lose
 			winlose.text = "You Lose";
@@ -107,9 +108,7 @@ public class EnglishGameController : MonoBehaviour
 			//show finish UI
 			finish_group.alpha = 1f;
 			finish_group.blocksRaycasts = true;
-		}
-		string checkWord = removeSpaces(wordToGuess.text);
-		if(checkWord == wordChosen){
+		}else if(checkWord == wordChosen){
 			//player guessed word, win
 			winlose.text = "You Win";
 			//show finish UI
