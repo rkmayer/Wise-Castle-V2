@@ -195,7 +195,7 @@ public class MathGameScript : MonoBehaviour
 				break;
 				case(2):
 				//division
-				math_operator = '/';
+				math_operator = (char)247;
 				num1 = Random.Range(2,25);
 				num2 = getFactor(num1);	
 				answer = num1 / num2;
@@ -229,7 +229,7 @@ public class MathGameScript : MonoBehaviour
 				break;
 				case(2):
 				//division
-				math_operator = '/';
+				math_operator = (char)247;
 				num2 = getFactor(num1);
 				answer = num1 / num2;
 				questionText.text = num1 + " " + math_operator + " ?" + " = " + answer;
@@ -262,7 +262,7 @@ public class MathGameScript : MonoBehaviour
 				break;
 				case(2):
 				//division
-				math_operator = '/';
+				math_operator = (char)247;
 				num2 = getFactor(num1);
 				answer = num1 / num2;
 				questionText.text = num1 + " ? " + num2 + " = " + answer;
@@ -295,7 +295,7 @@ public class MathGameScript : MonoBehaviour
 				break;
 				case(2):
 				//division
-				math_operator = '/';
+				math_operator = (char)247;
 				num2 = getFactor(num1);
 				answer = num1 / num2;
 				questionText.text = num1 + " " + math_operator + " " + num2 + " = ?";
@@ -380,7 +380,7 @@ public class MathGameScript : MonoBehaviour
 				passed = true;
 			}
 			break;
-			case('/'):
+			case((char)247):
 			if(num1 / num2 == answer){
 				passed = true;
 			}

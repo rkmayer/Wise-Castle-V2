@@ -4263,7 +4263,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: /
+  m_Text: "\xF7"
 --- !u!222 &943424769
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7346,7 +7346,7 @@ GameObject:
   - component: {fileID: 1850202747}
   - component: {fileID: 1850202746}
   m_Layer: 10
-  m_Name: /
+  m_Name: "\xF7"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
