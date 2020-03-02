@@ -606,10 +606,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Test your spelling capabilities...
-
-
-    [???]'
+  m_Text: Test your intuition and spelling skills by playing a game of hangman. Let's
+    see if your vocab is up to par!
 --- !u!222 &1171929864
 CanvasRenderer:
   m_ObjectHideFlags: 0
