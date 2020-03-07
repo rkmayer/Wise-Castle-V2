@@ -8,6 +8,8 @@ TagManager:
   - UI
   - QuestionText
   - music
+  - confirmSound
+  - cancelSound
   layers:
   - Default
   - TransparentFX

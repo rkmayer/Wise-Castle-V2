@@ -8,12 +8,15 @@ using UnityEngine;
 
 public class MusicScript : MonoBehaviour
 {
+	
+	public AudioSource confirmSound;
+	public AudioSource cancelSound;
+	
 	//play this music uninterrupted between non-game scenes of app
 	public AudioSource mainBackgroundMusic;
 	
 	public void Awake(){
 		DontDestroyOnLoad(transform.gameObject);
-		mainBackgroundMusic = GetComponent<AudioSource>();
 	}
 	
 	public void PlayBGMusic(){
@@ -25,5 +28,13 @@ public class MusicScript : MonoBehaviour
 	
 	public void StopBGMusic(){
 		mainBackgroundMusic.Stop();
+	}
+	
+	public void PlayConfirmSound(){
+		confirmSound.Play();
+	}
+	
+	public void PlayCancelSound(){
+		cancelSound.Play();
 	}
 }
