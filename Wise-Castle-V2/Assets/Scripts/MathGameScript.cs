@@ -6,17 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class MathGameScript : MonoBehaviour
 {
-
+	//game variables
+	//the player speed
 	public float playerSpeed = 150;
 	[SerializeField] private Animator myAnimationController;
 	
+	//bool to check if player is stopped
 	public bool stopped = false;
 	
+	//audio
+	public AudioSource questionCompleteSound;
+	public AudioSource incorrectSound;
+	public AudioSource enterSound;
+	public AudioSource bgMusic;
+	public AudioSource levelCompleteSound;
+	
+	//points
 	public int pointsEarned = 0;
 	public int questionsRemaining = 3;
 	
+	//collision
 	public Collider2D objectTouching;
 	
+	//ui
 	public GameObject ui;
 	public CanvasGroup ui_group;
 	
@@ -30,7 +42,7 @@ public class MathGameScript : MonoBehaviour
 	//buttons
 	public Button button_0, button_1, button_2, button_3, button_4, button_5,
 	button_6, button_7, button_8, button_9, button_plus, button_minus,
-	button_divide, button_multiply, button_enter, button_OK;
+	button_divide, button_multiply, button_enter, button_OK, button_back;
 	
 	//components of math question
 	int num1;
@@ -66,12 +78,17 @@ public class MathGameScript : MonoBehaviour
 		button_9.onClick.AddListener(() => inputValue('9'));
 		button_plus.onClick.AddListener(() => inputValue('+'));
 		button_minus.onClick.AddListener(() => inputValue('-'));
-		button_divide.onClick.AddListener(() => inputValue('/'));
+		button_divide.onClick.AddListener(() => inputValue((char)247));
 		button_multiply.onClick.AddListener(() => inputValue('x'));
 		
 		button_enter.onClick.AddListener(enterInput);
 		
 		button_OK.onClick.AddListener(goBackToMain);
+		
+		button_back.onClick.AddListener(deleteInput);
+		
+		//play background music
+		bgMusic.Play();
 	}
 	
     // Update is called once per frame
@@ -115,8 +132,14 @@ public class MathGameScript : MonoBehaviour
 			myAnimationController.SetBool("tail", true);
 			//show finish ui and return to main scene (button)
 			showFinishUI();
+			//stop background music
+			bgMusic.Stop();
+			levelCompleteSound.Play();
 			//stop player
 			stopped = true;
+		}else{
+			//play complete sound
+			questionCompleteSound.Play();
 		}
 	}
 	
@@ -313,7 +336,14 @@ public class MathGameScript : MonoBehaviour
 	
 	//input
 	public void inputValue(char val){
+		enterSound.Play();
 		inputText.text = inputText.text + val;
+	}
+	
+	//backspace
+	public void deleteInput(){
+		enterSound.Play();
+		inputText.text = "";
 	}
 	
 	public void enterInput(){
@@ -329,6 +359,7 @@ public class MathGameScript : MonoBehaviour
 			}else{
 				//is incorrect
 				inputText.text = "";
+				incorrectSound.Play();
 			}
 			break;
 			case(1):
@@ -339,6 +370,7 @@ public class MathGameScript : MonoBehaviour
 			}else{
 				//is incorrect
 				inputText.text = "";
+				incorrectSound.Play();
 			}
 			break;
 			case(2):
@@ -350,6 +382,7 @@ public class MathGameScript : MonoBehaviour
 			}else{
 				//is incorrect
 				inputText.text = "";
+				incorrectSound.Play();
 			}
 			break;
 			case(3):
@@ -360,6 +393,7 @@ public class MathGameScript : MonoBehaviour
 			}else{
 				//is incorrect
 				inputText.text = "";
+				incorrectSound.Play();
 			}
 			break;
 		}
@@ -398,6 +432,7 @@ public class MathGameScript : MonoBehaviour
 	
 	//go back to main scene
 	public void goBackToMain(){
+		enterSound.Play();
 		SceneManager.LoadScene("main");
 	}
 }
