@@ -53,6 +53,9 @@ public class MathGameScript : MonoBehaviour
 	int operatorUsed; //0 = +, 1 = -, 2 = /, 3 = x
 	
 	void Start(){
+		//pause main bg music
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().StopBGMusic();
+		
 		//get the math UI - this (player) -> child (camera) -> child (UI)
 		ui = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
 		ui_group = ui.GetComponent<CanvasGroup>();
@@ -433,6 +436,8 @@ public class MathGameScript : MonoBehaviour
 	//go back to main scene
 	public void goBackToMain(){
 		enterSound.Play();
+		//play main bg music
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayBGMusic();
 		SceneManager.LoadScene("main");
 	}
 }

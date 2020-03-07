@@ -48,6 +48,9 @@ public class EnglishGameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		//pause main bg music
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().StopBGMusic();
+		
 		//set body parts to inactive
 		head.enabled = false;
 		body.enabled = false;
@@ -107,7 +110,7 @@ public class EnglishGameController : MonoBehaviour
 	//checks if game is lost
 	void Update(){
 		string checkWord = removeSpaces(wordToGuess.text);
-		bool yayPlayed = false;
+		int yayCount = 0;
 		if(part_count == 6){
 			//all parts hanged, lose
 			winlose.text = "You Lose";
@@ -118,7 +121,11 @@ public class EnglishGameController : MonoBehaviour
 		}else if(checkWord == wordChosen){
 			//player guessed word, win
 			winlose.text = "You Win";
-			//play yay sound here goes infinitely
+			//yay sound here goes infinitely??
+			if(!(yaySound.isPlaying) && yayCount == 0){
+				yaySound.Play();
+				yayCount++;
+			}
 			//show finish UI
 			finish_group.alpha = 1f;
 			finish_group.blocksRaycasts = true;
@@ -132,6 +139,8 @@ public class EnglishGameController : MonoBehaviour
 	
 	//go back to main scene
 	public void goBackToMain(){
+		//play main bg music
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayBGMusic();
 		SceneManager.LoadScene("main");
 	}
 
