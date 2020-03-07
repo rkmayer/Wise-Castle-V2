@@ -40,6 +40,11 @@ public class EnglishGameController : MonoBehaviour
 	[SerializeField] int minWordLength;
 	[SerializeField] int maxWordLength;
 	
+	//sounds
+	public AudioSource confirmSound;
+	public AudioSource cancelSound;
+	public AudioSource yaySound;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -108,12 +113,14 @@ public class EnglishGameController : MonoBehaviour
 			//show finish UI
 			finish_group.alpha = 1f;
 			finish_group.blocksRaycasts = true;
+			return;
 		}else if(checkWord == wordChosen){
 			//player guessed word, win
 			winlose.text = "You Win";
 			//show finish UI
 			finish_group.alpha = 1f;
 			finish_group.blocksRaycasts = true;
+			return;
 		}
 	}
 	
@@ -162,6 +169,7 @@ public class EnglishGameController : MonoBehaviour
 		btn.interactable = false;
 		if(wordChosen.Contains(guess.ToString())){
 			//the letter is in the word
+			confirmSound.Play();
 			//get indices of the guessed letter in wordChosen
 			List<int> indicesList = new List<int>();
 			for(int i = 0; i < wordChosen.Length; i++){
@@ -173,6 +181,7 @@ public class EnglishGameController : MonoBehaviour
 			wordToGuess.text = updateHiddenWord(indicesList.ToArray(), guess, wordToGuess.text);
 		}else{
 			//the letter is not in the word
+			cancelSound.Play();
 			updateMan(part_count);
 			part_count++;
 		}
