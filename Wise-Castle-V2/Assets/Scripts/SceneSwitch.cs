@@ -11,22 +11,18 @@ public class SceneSwitch : MonoBehaviour
 	}
 	
     public void LoadArtScene(){
-		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().StopBGMusic();
 		SceneManager.LoadScene("art");
     }
 
     public void LoadEnglishScene(){
-		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().StopBGMusic();
 		SceneManager.LoadScene("english");
     }
 
 	public void LoadChemScene(){
-		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().StopBGMusic();
 		SceneManager.LoadScene("chemistry");
 	}
 	
 	public void LoadMathScene(){
-		Debug.Log("yeah its doing it");
 		SceneManager.LoadScene("math");
 	}
 	

@@ -49,12 +49,17 @@ public class EnglishGameController : MonoBehaviour
 	public AudioSource confirmSound;
 	public AudioSource cancelSound;
 	public AudioSource yaySound;
+	public AudioSource bgMusic;
 	
     // Start is called before the first frame update
     void Start()
     {
 		//pause main bg music
 		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().StopBGMusic();
+		//play bg music for hangman
+		if(!(bgMusic.isPlaying)){
+			bgMusic.Play();
+		}
 		
 		//set body parts to inactive
 		head.enabled = false;
