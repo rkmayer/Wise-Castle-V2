@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 16020
+  controlID: 995
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 15994
+  controlID: 996
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 15995
+  controlID: 997
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b8d8ffff6cfbffff70340000de3400005a360000767d0000527e0000
+      m_ExpandedIDs: 6cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -545,11 +545,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sounds/Effects
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 87
   m_LastFolders:
-  - Assets/Sounds/Effects
+  - Assets/Scripts
   m_LastFoldersGridSize: 87
   m_LastProjectPath: C:\Users\Ryan\Documents\School Work 2019-2020\Adv. Game Programming
     Project\Wise-Castle-V2\Wise-Castle-V2
@@ -557,9 +557,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 66370000
-    m_LastClickedID: 14182
-    m_ExpandedIDs: 0000000040370000423700004437000046370000483700004a3700004c37000064370000
+    m_SelectedIDs: 3a370000
+    m_LastClickedID: 14138
+    m_ExpandedIDs: 00000000183700001a3700001c3700001e37000020370000223700002437000026370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -587,7 +587,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000040370000423700004437000046370000483700004a3700004c37000064370000
+    m_ExpandedIDs: 00000000183700001a3700001c3700001e37000020370000223700002437000026370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

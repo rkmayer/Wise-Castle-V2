@@ -102,25 +102,26 @@ public class EnglishGameController : MonoBehaviour
 		//show hidden word
 		showHiddenWord(wordChosen);
     }
+
 	
 	//checks if game is lost
 	void Update(){
 		string checkWord = removeSpaces(wordToGuess.text);
+		bool yayPlayed = false;
 		if(part_count == 6){
-			//man is hanged, lose
+			//all parts hanged, lose
 			winlose.text = "You Lose";
 			wordToGuess.text = wordChosen;
 			//show finish UI
 			finish_group.alpha = 1f;
 			finish_group.blocksRaycasts = true;
-			return;
 		}else if(checkWord == wordChosen){
 			//player guessed word, win
 			winlose.text = "You Win";
+			//play yay sound here goes infinitely
 			//show finish UI
 			finish_group.alpha = 1f;
 			finish_group.blocksRaycasts = true;
-			return;
 		}
 	}
 	
