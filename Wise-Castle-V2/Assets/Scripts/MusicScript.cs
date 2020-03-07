@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+	Main BG Music Script
+	Ryan Mayer
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

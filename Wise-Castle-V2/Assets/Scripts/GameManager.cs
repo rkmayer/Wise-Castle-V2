@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
     {
         finishBtn.onClick.AddListener(goBackToMain);
         endCanvas.SetActive(false);
+		//stop main bg music
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().StopBGMusic();
     }
 
     void Update() //runs every frame 
@@ -182,6 +184,8 @@ public class GameManager : MonoBehaviour
     
     public void goBackToMain()//end screen button --> return back to main
     {
+		//play main bg music
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayBGMusic();
 		SceneManager.LoadScene("main");
 	}
 }
