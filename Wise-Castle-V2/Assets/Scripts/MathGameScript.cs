@@ -123,7 +123,7 @@ public class MathGameScript : MonoBehaviour
 	//question was answered correctly
 	public void pass(){
 		//award points
-		pointsEarned = pointsEarned + 10;
+		pointsEarned = pointsEarned + 5;
 		//delete object
 		if(objectTouching.gameObject.tag == "delete"){
 			Destroy(objectTouching.gameObject);

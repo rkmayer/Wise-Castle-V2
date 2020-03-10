@@ -44,6 +44,11 @@ public class EnglishGameController : MonoBehaviour
 	//limits of word size
 	[SerializeField] int minWordLength;
 	[SerializeField] int maxWordLength;
+	//points
+	int pointsEarned = 0;
+	int rewardPoints = 15;
+	//win-lose state
+	bool gameWin = false;
 	
 	//sounds
 	public AudioSource confirmSound;
@@ -105,10 +110,10 @@ public class EnglishGameController : MonoBehaviour
 		btn_y.onClick.AddListener(() => checkGuess('y', btn_y));
 		btn_z.onClick.AddListener(() => checkGuess('z', btn_z));
 		
-		btn_yes.onClick.AddListener(reloadScene); //restart game
-		btn_no.onClick.AddListener(goBackToMain); //back to main menu
+		btn_yes.onClick.AddListener(() => reloadScene(gameWin)); //restart game
+		btn_no.onClick.AddListener(() => goBackToMain(gameWin)); //back to main menu
 		
-		//load text file (10000 common english words)
+		//load words file
 		words = System.IO.File.ReadAllLines(@"Assets/Text Files/hangman_words.txt");
 		//choose a word to guess
 		chooseWord(words);
@@ -130,6 +135,7 @@ public class EnglishGameController : MonoBehaviour
 			finish_group.blocksRaycasts = true;
 		}else if(checkWord == wordChosen){
 			//player guessed word, win
+			gameWin = true;
 			winlose.text = "You Win";
 			//yay sound here goes infinitely??
 			if(!(yaySound.isPlaying) && yayCount == 0){
@@ -143,12 +149,22 @@ public class EnglishGameController : MonoBehaviour
 	}
 	
 	//reload scene
-	public void reloadScene(){
+	public void reloadScene(bool gameWin){
+		if(gameWin){
+			//reload from win state, save points
+			GameObject.FindGameObjectWithTag("Points").GetComponent<PointScript>().AddPoints(15);
+		}
+		gameWin = false;
 		SceneManager.LoadScene("english");
 	}
 	
 	//go back to main scene
-	public void goBackToMain(){
+	public void goBackToMain(bool gameWin){
+		if(gameWin){
+			//quit from win state, save points
+			GameObject.FindGameObjectWithTag("Points").GetComponent<PointScript>().AddPoints(15);
+		}
+		gameWin = false;
 		//play main bg music
 		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayBGMusic();
 		SceneManager.LoadScene("main");

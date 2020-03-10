@@ -32,4 +32,10 @@ public class PointScript : MonoBehaviour{
 		int updatedPoints = currentPoints + p;
 		PlayerPrefs.SetInt("PlayerPoints", updatedPoints);
 	}
+	
+	//set player points to 0
+	public void ZeroPoints(){
+		PlayerPrefs.SetInt("PlayerPoints", 0);
+		playerInfoPoints.text = PlayerPrefs.GetInt("PlayerPoints", 0).ToString();
+	}
 }
