@@ -44,12 +44,22 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Text endText;
     
+    //sounds
+	public AudioSource correctSound; //get a match
+	public AudioSource yaySound; //get all matches of a round 
+	public AudioSource bgMusic;
+    
     void Awake() //occurs before game starts
     {
         finishBtn.onClick.AddListener(goBackToMain);
-        endCanvas.SetActive(false);
-		//stop main bg music
+        endCanvas.SetActive(false);	
+    }
+    
+    void Start()//once the game begins 
+    {
+        //stop main bg music
 		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().StopBGMusic();
+        bgMusic.Play();
     }
 
     void Update() //runs every frame 
@@ -140,6 +150,7 @@ public class GameManager : MonoBehaviour
     IEnumerator RestockCards()//spawning new set of cards on screen 
     {
         yield return new WaitForSeconds(_timeBetweenFlips);
+        yaySound.Play();
         cardSpawner.GetComponent<CardSpawner>().SpawningCards();
         cardsLeft = 12;
     }
@@ -162,6 +173,7 @@ public class GameManager : MonoBehaviour
         {
             pairsMade++;
             DecreaseCardCount();
+            correctSound.Play();
             return true;
         }
 
