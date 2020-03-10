@@ -198,6 +198,9 @@ public class GameManager : MonoBehaviour
     {
 		//play main bg music
 		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayBGMusic();
+		//save points
+		GameObject.FindGameObjectWithTag("Points").GetComponent<PointScript>().AddPoints(pairsMade);
+		//switch to main menu
 		SceneManager.LoadScene("main");
 	}
 }

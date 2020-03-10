@@ -443,6 +443,8 @@ public class MathGameScript : MonoBehaviour
 		enterSound.Play();
 		//play main bg music
 		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayBGMusic();
+		//save points
+		GameObject.FindGameObjectWithTag("Points").GetComponent<PointScript>().AddPoints(pointsEarned);
 		SceneManager.LoadScene("main");
 	}
 }
