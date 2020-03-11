@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/player.unity
     guid: e05832d431889a640a6fd993b14a2e70
   - enabled: 1
-    path: Assets/Scenes/shop.unity
+    path: Assets/Scenes/Shop Scenes/shop.unity
     guid: c1c31f48d1d722940bcdb2c7ed9b0f08
   - enabled: 1
     path: Assets/Scenes/Tutorial Scenes/tutorial_art.unity
@@ -44,4 +44,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial Scenes/tutorial_math.unity
     guid: 24fbed270b599484e990fc81c0bfec4e
+  - enabled: 1
+    path: Assets/Scenes/Shop Scenes/shop_animals.unity
+    guid: 2491b80635907b54a91547c22667c699
+  - enabled: 1
+    path: Assets/Scenes/Shop Scenes/shop_hats.unity
+    guid: 8975beb14e41fbe41a6d441b6caf78d3
+  - enabled: 1
+    path: Assets/Scenes/Shop Scenes/shop_robes.unity
+    guid: 92cf028f69da8ad409c950ba3f22c228
   m_configObjects: {}
