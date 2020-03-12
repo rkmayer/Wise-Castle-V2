@@ -32,7 +32,8 @@ public class SceneSwitch : MonoBehaviour
 	}
 	
 	public void LoadShopScene(){
-		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayConfirmSound();
+		//GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayConfirmSound();
+		Debug.Log("clicked");
 		SceneManager.LoadScene("shop");
 	}
 	
