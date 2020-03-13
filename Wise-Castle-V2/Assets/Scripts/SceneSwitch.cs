@@ -26,14 +26,28 @@ public class SceneSwitch : MonoBehaviour
 		SceneManager.LoadScene("math");
 	}
 	
+	public void LoadSettingsScene(){
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayConfirmSound();
+		SceneManager.LoadScene("settings");
+	}
+	
 	public void LoadPlayerScene(){
 		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayConfirmSound();
 		SceneManager.LoadScene("player");
 	}
 	
+	public void LoadEditPlayerScene(){
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayConfirmSound();
+		SceneManager.LoadScene("player_edit");
+	}
+	
+	public void LoadPlayerInventory(){
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayConfirmSound();
+		SceneManager.LoadScene("player_inventory");
+	}
+	
 	public void LoadShopScene(){
-		//GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayConfirmSound();
-		Debug.Log("clicked");
+		GameObject.FindGameObjectWithTag("music").GetComponent<MusicScript>().PlayConfirmSound();
 		SceneManager.LoadScene("shop");
 	}
 	
