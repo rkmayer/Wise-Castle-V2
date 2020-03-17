@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 25216815}
   - component: {fileID: 25216814}
   m_Layer: 5
-  m_Name: Difficulty
+  m_Name: Difficulty_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 569986584}
   - component: {fileID: 569986583}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: Settings_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -21,7 +21,13 @@ public class DifficultyScript : MonoBehaviour
 	[SerializeField] Button easyBtn, normalBtn, hardBtn;
 	
 	public void Start(){
-		
+		if(PlayerPrefs.GetInt("Difficulty", 0) == 0){
+			DifficultySetEasy();
+		}else if(PlayerPrefs.GetInt("Difficulty", 0) == 1){
+			DifficultySetNormal();
+		}else if(PlayerPrefs.GetInt("Difficulty", 0) == 2){
+			DifficultySetHard();
+		}
 	}
 	
 	public void DifficultySetEasy(){
