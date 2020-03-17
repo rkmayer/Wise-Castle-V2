@@ -13,7 +13,6 @@ public class PointScript : MonoBehaviour{
 	//points shown in player info
 	public Text playerInfoPoints;
 	
-	//runs before everything else
 	void Start(){
 		//load points
 		playerInfoPoints.text = PlayerPrefs.GetInt("PlayerPoints", 0).ToString();
