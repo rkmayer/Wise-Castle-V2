@@ -694,6 +694,7 @@ GameObject:
   - component: {fileID: 570008930}
   - component: {fileID: 570008933}
   - component: {fileID: 570008934}
+  - component: {fileID: 570008935}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -791,6 +792,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInfoPoints: {fileID: 1570696315}
+--- !u!114 &570008935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570008929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a56f7ac85c212a4b910af8435c3fd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerBody: {fileID: 323360075}
+  PlayerEyes: {fileID: 1880539650}
+  PlayerMouth: {fileID: 1563984757}
+  PlayerHair: {fileID: 563897072}
+  PlayerClothes: {fileID: 955726137}
+  PlayerHat: {fileID: 1065488793}
+  PlayerAnimal: {fileID: 1150851810}
+  Body1: {fileID: 21300000, guid: f416023f294f04182a85d6f3a445fcad, type: 3}
+  Body2: {fileID: 21300000, guid: 5d871ae08ec1742feb68c9258929dc94, type: 3}
+  Body3: {fileID: 21300000, guid: 5da57fd377b0d4c87b920d5f109724ca, type: 3}
+  Body4: {fileID: 21300000, guid: e68cc0eb9399b4fd888eb7f91be774df, type: 3}
+  Body5: {fileID: 21300000, guid: e97536b593abb4af49f9b3b87af3b8a5, type: 3}
+  Robe1Red: {fileID: 21300000, guid: 2161e7e1b367849dcb2ebadc4faabeea, type: 3}
+  Robe1Blue: {fileID: 21300000, guid: c434496e296f94c348e1c3d47f43a643, type: 3}
+  Robe1Green: {fileID: 21300000, guid: cfd016e2d56bb47ae948ee37cea9d768, type: 3}
+  Robe1Grey: {fileID: 21300000, guid: 1787a0aac348c47b6a6a0d27c2bfe67e, type: 3}
+  Robe1Orange: {fileID: 21300000, guid: 8e15b63c5466945ea9b9fefc436a09e5, type: 3}
+  Robe1Purple: {fileID: 21300000, guid: 441110b7381294829b3279158cfc1b70, type: 3}
+  Robe2Red: {fileID: 21300000, guid: 305b8aa6976724ecab57f5ed8bfab26c, type: 3}
+  Robe2Blue: {fileID: 21300000, guid: e73543012e06f4c568c6191253a82bd6, type: 3}
+  Robe2Green: {fileID: 21300000, guid: e1117b34f9670457a831fa9f598ca64d, type: 3}
+  Robe2Grey: {fileID: 21300000, guid: 239dfc9373509469cb3284e09e2773ae, type: 3}
+  Robe2Orange: {fileID: 21300000, guid: d009e911172454c69aa1fa9eea5b7a14, type: 3}
+  Robe2Purple: {fileID: 21300000, guid: 388bb405386eb4919a81b47ffa64260e, type: 3}
+  Robe3Red: {fileID: 21300000, guid: 9eaba6df4576242c7839db1081b61fb9, type: 3}
+  Robe3Blue: {fileID: 21300000, guid: 27bffc4f04cc54a55965889911022e2e, type: 3}
+  Robe3Green: {fileID: 21300000, guid: dd6fbdf1f7b034a3c987d84d23ff2b25, type: 3}
+  Robe3Grey: {fileID: 21300000, guid: 00c1411e4b6f54c54b34fe4cdec0ac44, type: 3}
+  Robe3Orange: {fileID: 21300000, guid: e7cbe9d0e812a4e61a93b42c3f3a28da, type: 3}
+  Robe3Purple: {fileID: 21300000, guid: 03d1b4ddb83e648c7934e67a59cfc488, type: 3}
+  Clothes1: {fileID: 21300000, guid: 93fe3ec869ead4105b292c7a15e8053e, type: 3}
+  Eyes1: {fileID: 21300000, guid: 9f8ede43c1c4447fd8d70fe0af34a2fd, type: 3}
+  Eyes2: {fileID: 21300000, guid: a25081ecf713240c18a5cb62af5b7343, type: 3}
+  Eyes3: {fileID: 21300000, guid: fcbaa78a3275847428b8fe2c3bd7454b, type: 3}
+  Eyes4: {fileID: 21300000, guid: d137f5edbb7dc48f19d1fed06b9f4ece, type: 3}
+  Hair1: {fileID: 21300000, guid: 08694e9d7bcb54f17aad62561a783fa2, type: 3}
+  Hat1: {fileID: 0}
+  Mouth1: {fileID: 21300000, guid: e95e7fe6e1ce643dab4f85f2aabd6a95, type: 3}
+  Mouth2: {fileID: 21300000, guid: 7d2e256b8209041c591c8da53acedd40, type: 3}
+  Bunny: {fileID: 21300000, guid: f4a7da56f381a4d63b4c92a5b1e22d6c, type: 3}
+  Turtle: {fileID: 21300000, guid: bfa571e86df044bc0807eccf1ef63114, type: 3}
 --- !u!1 &925391275
 GameObject:
   m_ObjectHideFlags: 0
