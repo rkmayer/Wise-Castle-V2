@@ -201,7 +201,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 44844923}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat1_3
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &44844923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,7 +340,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 157269750}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat3_2
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &157269750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +582,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 363370450}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat3_3
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &363370450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,7 +721,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 375854539}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat3_5
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &375854539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,7 +1042,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 469054788}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat3_1
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &469054788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,7 +1181,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 493422291}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat3_4
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &493422291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,7 +1320,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 539522261}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat3_7
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &539522261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,7 +1502,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 658459365}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat2_3
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &658459365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,7 +1750,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 804639252}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat1_5
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &804639252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1734,7 +1932,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 815236071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat2_5
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &815236071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,7 +2071,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 974840619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat1_2
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &974840619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1968,7 +2210,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1064681860}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat2_6
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1064681860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2166,7 +2430,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1166091711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat1_7
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1166091711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,7 +2569,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1180621691}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat3_6
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1180621691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2400,7 +2708,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1282318302}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat2_4
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1282318302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2517,7 +2847,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1294674709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat1_4
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1294674709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2634,7 +2986,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1416803049}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat1_8
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1416803049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2817,7 +3191,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585762046}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat2_1
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1585762046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2934,7 +3330,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1655587202}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat1_6
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1655587202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3051,7 +3469,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1721130173}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat2_7
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1721130173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3168,7 +3608,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1836459027}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat3_8
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1836459027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3285,7 +3747,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1943800827}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat2_2
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1943800827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3402,7 +3886,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1992301292}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729897533}
+        m_MethodName: buyItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 729897533}
+        m_MethodName: setPurchaseFlag
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hat2_8
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1992301292
 MonoBehaviour:
   m_ObjectHideFlags: 0
